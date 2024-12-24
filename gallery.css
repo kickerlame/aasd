@@ -1,0 +1,42 @@
+.content {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next row */
+  justify-content: center; /* Centers the gallery content */
+  gap: 20px; /* Adds space between gallery items */
+  margin: 20px; /* Adds space around the content area */
+}
+
+div.gallery {
+  border: 3px solid #dd45ff; /* Keeps your border style */
+  border-radius: 8px; /* Adds rounded corners for a modern look */
+  overflow: hidden; /* Ensures content stays inside rounded borders */
+  width: calc(33.333% - 40px); /* Adjusts to fit three items in a row with gaps */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+  transition: border-color 0.3s ease; /* Smooth hover transition */
+  aspect-ratio: 16 / 9; /* Ensures a consistent aspect ratio for all gallery items */
+  display: flex; /* Enables centering of content */
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0; /* Adds a subtle background for low-height images */
+}
+
+div.gallery:hover {
+  border-color: #000000; /* Retains the hover effect */
+}
+
+div.gallery img, 
+div.gallery video {
+  max-width: 100%; /* Ensures content scales within the container */
+  max-height: 100%; /* Prevents content from overflowing the container */
+  display: block; /* Ensures consistent alignment */
+  object-fit: cover; /* Ensures images fill the container neatly without stretching */
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+  color: white;
+  background-color: #dd45ff; /* Keeps your color scheme */
+  font-size: 14px; /* Ensures text is not too large */
+  border-top: 2px solid #ffffff; /* Adds a clean division line */
+}
